@@ -1,0 +1,391 @@
+  <a target="_blank" rel="noopener" href="https://zxalive.com" class="special-link">新站点zxalive.com</a>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"zxblog.eu.org","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="SpringMVC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringMVC-五种类型参数传递">
+<meta property="og:url" content="https://zxblog.eu.org/posts/333d/index.html">
+<meta property="og:site_name" content="知行博客">
+<meta property="og:description" content="SpringMVC">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-08-14T10:39:10.000Z">
+<meta property="article:modified_time" content="2024-08-18T10:14:29.319Z">
+<meta property="article:author" content="zhangxin">
+<meta property="article:tag" content="SpringMVC">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://zxblog.eu.org/posts/333d/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zxblog.eu.org/posts/333d/","path":"posts/333d/","title":"SpringMVC-五种类型参数传递"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>SpringMVC-五种类型参数传递 | 知行博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">知行博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">新站点：zxalive.com</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E5%8F%82%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">普通参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#POJO%E7%B1%BB%E5%9E%8B%E5%8F%82%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">POJO类型参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B5%8C%E5%A5%97POJO%E7%B1%BB%E5%9E%8B%E5%8F%82%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">嵌套POJO类型参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B%E5%8F%82%E6%95%B0"><span class="nav-number">4.</span> <span class="nav-text">数组类型参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B%E5%8F%82%E6%95%B0"><span class="nav-number">5.</span> <span class="nav-text">集合类型参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B91%EF%BC%9A-RequestParam"><span class="nav-number">6.</span> <span class="nav-text">知识点1：@RequestParam</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zhangxin</p>
+  <div class="site-description" itemprop="description">新站点：zxalive.com</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">267</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+  <a target="_blank" rel="noopener" href="https://zxalive.com" class="special-link">新站点zxalive.com</a>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+  <a target="_blank" rel="noopener" href="https://zxalive.com" class="special-link">新站点zxalive.com</a>
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zxblog.eu.org/posts/333d/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhangxin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="知行博客">
+      <meta itemprop="description" content="新站点：zxalive.com">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="SpringMVC-五种类型参数传递 | 知行博客">
+      <meta itemprop="description" content="SpringMVC">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          SpringMVC-五种类型参数传递
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-08-14 18:39:10" itemprop="dateCreated datePublished" datetime="2022-08-14T18:39:10+08:00">2022-08-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-08-18 18:14:29" itemprop="dateModified" datetime="2024-08-18T18:14:29+08:00">2024-08-18</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">SpringMVC</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><blockquote>
+<p><code>推荐先阅读</code>：<a href="/posts/3715">Spring全家桶</a></p>
+</blockquote>
+<h3 id="普通参数"><a href="#普通参数" class="headerlink" title="普通参数"></a>普通参数</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">GET http:<span class="regexp">//</span>localhost/commonParamDifferentName?name=张三&amp;age=<span class="number">18</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RequestMapping(&quot;/commonParamDifferentName&quot;)</span></span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">commonParamDifferentName</span><span class="params">(<span class="meta">@RequestPaam(&quot;name&quot;)</span> String userName , <span class="type">int</span> age)</span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;普通参数传递 userName ==&gt; &quot;</span>+userName);</span><br><span class="line">    System.out.println(<span class="string">&quot;普通参数传递 age ==&gt; &quot;</span>+age);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;&#123;&#x27;module&#x27;:&#x27;common param different name&#x27;&#125;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>@RequestPaam(&quot;name&quot;)</code> 解决参数不一致问题</p>
+<blockquote>
+<p>注意:写上@RequestParam注解框架就不需要自己去解析注入，能提升框架处理性能</p>
+</blockquote>
+<h3 id="POJO类型参数"><a href="#POJO类型参数" class="headerlink" title="POJO类型参数"></a>POJO类型参数</h3><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="symbol">User</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">int</span> age;</span><br><span class="line">    <span class="comment">//setter...getter...略</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">GET http:<span class="regexp">//</span>localhost/commonParamDifferentName?name=zhangxin&amp;age=<span class="number">18</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">//POJO参数：请求参数与形参对象中的属性对应即可完成参数传递</span></span><br><span class="line"><span class="meta">@RequestMapping(<span class="string">&quot;/pojoParam&quot;</span>)</span></span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="keyword">public</span> String pojoParam(User user)&#123;</span><br><span class="line">    System.<span class="keyword">out</span>.println(<span class="string">&quot;pojo参数传递 user ==&gt; &quot;</span>+user);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;&#123;&#x27;module&#x27;:&#x27;pojo param&#x27;&#125;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="嵌套POJO类型参数"><a href="#嵌套POJO类型参数" class="headerlink" title="嵌套POJO类型参数"></a>嵌套POJO类型参数</h3><figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Address</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">String</span> province;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">String</span> city;</span><br><span class="line">    <span class="comment">//setter...getter...略</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">String</span> name;</span><br><span class="line">    <span class="keyword">private</span> int age;</span><br><span class="line">    <span class="keyword">private</span> Address address;</span><br><span class="line">    <span class="comment">//setter...getter...略</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line">GET http://localhost/commonParamDifferentName?name=zhangxin<span class="variable">&amp;age</span>=18<span class="variable">&amp;address.</span>city=hangzhou<span class="variable">&amp;address.</span>province=zhejiang</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="comment">//POJO参数：请求参数与形参对象中的属性对应即可完成参数传递</span></span><br><span class="line"><span class="meta">@RequestMapping(<span class="string">&quot;/pojoParam&quot;</span>)</span></span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="keyword">public</span> String pojoParam(User user)&#123;</span><br><span class="line">    System.<span class="keyword">out</span>.println(<span class="string">&quot;pojo参数传递 user ==&gt; &quot;</span>+user);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;&#123;&#x27;module&#x27;:&#x27;pojo param&#x27;&#125;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组类型参数"><a href="#数组类型参数" class="headerlink" title="数组类型参数"></a>数组类型参数</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">GET http:<span class="regexp">//</span>localhost/arrayParam?likes=game&amp;likes=music&amp;likes=travel</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="comment">//数组参数：同名请求参数可以直接映射到对应名称的形参数组对象中</span></span><br><span class="line">@<span class="constructor">RequestMapping(<span class="string">&quot;/arrayParam&quot;</span>)</span></span><br><span class="line">@ResponseBody</span><br><span class="line">public String <span class="built_in">array</span><span class="constructor">Param(String[] <span class="params">likes</span>)</span>&#123;</span><br><span class="line">    <span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(<span class="string">&quot;数组参数传递 likes ==&gt; &quot;</span>+ <span class="module-access"><span class="module"><span class="identifier">Arrays</span>.</span></span><span class="keyword">to</span><span class="constructor">String(<span class="params">likes</span>)</span>);</span><br><span class="line">    return <span class="string">&quot;&#123;&#x27;module&#x27;:&#x27;array param&#x27;&#125;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="集合类型参数"><a href="#集合类型参数" class="headerlink" title="集合类型参数"></a>集合类型参数</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">GET http:<span class="regexp">//</span>localhost/arrayParam?likes=game&amp;likes=music&amp;likes=travel</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//集合参数：同名请求参数可以使用@RequestParam注解映射到对应名称的集合对象中作为数据</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">&quot;/listParam&quot;</span>)</span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="keyword">public</span> <span class="title class_">String</span> <span class="title function_">listParam</span>(<span class="params"><span class="meta">@RequestParam</span> List&lt;<span class="built_in">String</span>&gt; likes</span>)&#123;</span><br><span class="line">    <span class="title class_">System</span>.<span class="property">out</span>.<span class="title function_">println</span>(<span class="string">&quot;集合参数传递 likes ==&gt; &quot;</span>+ likes);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;&#123;&#x27;module&#x27;:&#x27;list param&#x27;&#125;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="知识点1：-RequestParam"><a href="#知识点1：-RequestParam" class="headerlink" title="知识点1：@RequestParam"></a>知识点1：@RequestParam</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>@RequestParam</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类型</td>
+<td>形参注解</td>
+</tr>
+<tr>
+<td>位置</td>
+<td>SpringMVC控制器方法形参定义前面</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>绑定请求参数与处理器方法形参间的关系</td>
+</tr>
+<tr>
+<td>相关参数</td>
+<td>required：是否为必传参数 <br/>defaultValue：参数默认值</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/SpringMVC/" rel="tag"># SpringMVC</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/29b2/" rel="prev" title="SpringMVC-bean的加载格式">
+                  <i class="fa fa-angle-left"></i> SpringMVC-bean的加载格式
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/26f6/" rel="next" title="SpringMVC-JSON数据传输参数">
+                  SpringMVC-JSON数据传输参数 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+  <a target="_blank" rel="noopener" href="https://zxalive.com" class="special-link">新站点zxalive.com</a>
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">zhangxin</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">1.8m</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">26:53</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

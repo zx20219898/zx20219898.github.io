@@ -1,0 +1,385 @@
+  <a target="_blank" rel="noopener" href="https://zxalive.com" class="special-link">新站点zxalive.com</a>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"zxblog.eu.org","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Java工程师面试题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java工程师面试题-场景题-微信红包相关问题">
+<meta property="og:url" content="https://zxblog.eu.org/posts/8694/index.html">
+<meta property="og:site_name" content="知行博客">
+<meta property="og:description" content="Java工程师面试题">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-08-16T09:12:13.000Z">
+<meta property="article:modified_time" content="2024-08-18T10:14:29.252Z">
+<meta property="article:author" content="zhangxin">
+<meta property="article:tag" content="Java工程师面试题">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://zxblog.eu.org/posts/8694/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zxblog.eu.org/posts/8694/","path":"posts/8694/","title":"Java工程师面试题-场景题-微信红包相关问题"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Java工程师面试题-场景题-微信红包相关问题 | 知行博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">知行博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">新站点：zxalive.com</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zhangxin</p>
+  <div class="site-description" itemprop="description">新站点：zxalive.com</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">267</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+  <a target="_blank" rel="noopener" href="https://zxalive.com" class="special-link">新站点zxalive.com</a>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+  <a target="_blank" rel="noopener" href="https://zxalive.com" class="special-link">新站点zxalive.com</a>
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zxblog.eu.org/posts/8694/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhangxin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="知行博客">
+      <meta itemprop="description" content="新站点：zxalive.com">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Java工程师面试题-场景题-微信红包相关问题 | 知行博客">
+      <meta itemprop="description" content="Java工程师面试题">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java工程师面试题-场景题-微信红包相关问题
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-08-16 17:12:13" itemprop="dateCreated datePublished" datetime="2022-08-16T17:12:13+08:00">2022-08-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-08-18 18:14:29" itemprop="dateModified" datetime="2024-08-18T18:14:29+08:00">2024-08-18</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">Java工程师面试题</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><blockquote>
+<p><code>推荐先阅读</code>：<a href="/posts/b2c4">Java工程师面试题</a></p>
+</blockquote>
+<p>概况：2014年微信红包使用数据库硬抗整个流量，2015年使用cache抗流量。</p>
+<ul>
+<li><p>微信的金额什么时候算？</p>
+<p>微信红包的金额是拆的时候实时算出来，不是预先分配的，采用的是纯内存计算，不需要预算空间存储。采取实时计算金额的考虑，是因为实时效率很高，而预算需要占存储，预算空间效率低。</p>
+</li>
+<li><p>为什么明明抢到红包，点开后发现没有？</p>
+<p>2014年的红包一点开就知道金额，分两次操作，先抢到金额，然后再转账。2015年的红包的拆和抢是分离的，需要点两次，因此会出现抢到红包了，但点开后告知红包已经被领完的状况。进入到第一个页面不代表抢到，只表示当时红包还有。</p>
+</li>
+<li><p>红包里的金额怎么算？为什么出现各个红包金额相差很大？</p>
+<p>随机，额度在0.01和剩余平均值*2之间。</p>
+<p>例如：发100块钱，总共10个红包，那么平均值是10块钱一个，那么发出来的红包的额度在0.01元～20元之间波动。当前面3个红包总共被领了40块钱时，剩下60块钱，总共7个红包，那么这7个红包的额度在：0.01～（60&#x2F;7*2）&#x3D;17.14之间。</p>
+<p>注意：这里的算法是每被抢一个后，剩下的会再次执行上面的这样的算法。这样算下去，会超过最开始的全部金额，因此到了最后面如果不够这么算，那么会采取如下算法：保证剩余用户能拿到最低1分钱即可。如果前面的人手气不好，那么后面的余额越多，红包额度也就越多，因此实际概率一样的。</p>
+</li>
+<li><p>红包的设计</p>
+<p>微信从财付通拉取金额数据过来，生成个数&#x2F;红包类型&#x2F;金额放到redis集群里，app端将红包ID的请求放入请求队列中，如果发现超过红包的个数，直接返回。根据红包的逻辑处理成功得到令牌请求，则由财付通进行一致性调用，通过像比特币一样，两边保存交易记录，交易后交给第三方服务审计，如果交易过程中出现不一致就强制回归。</p>
+</li>
+<li><p>红包如何计算被抢完？</p>
+<p>cache会抵抗无效请求，将无效的请求过滤掉，实际进入到后台的量不大。cache记录红包个数，原子操作进行个数递减，到0表示被抢光。财付通按照20万笔每秒入账准备，但实际还不到8万每秒。</p>
+</li>
+<li><p>通如何保持8w每秒的写入？</p>
+<p>多主sharding，水平扩展机器。</p>
+</li>
+<li><p>据容量多少？</p>
+<p>一个红包只占一条记录，有效期只有几天，因此不需要太多空间。</p>
+</li>
+<li><p>查询红包分配，压力大不？</p>
+<p>抢到红包的人数和红包都在一条cache记录上，没有太大的查询压力。</p>
+</li>
+<li><p>一个红包一个队列？</p>
+<p>没有队列，一个红包一条数据，数据上有一个计数器字段。</p>
+</li>
+<li><p>有没有从数据上证明每个红包的概率是不是均等？</p>
+<p>不是绝对均等，就是一个简单的拍脑袋算法。</p>
+</li>
+<li><p>拍脑袋算法，会不会出现两个最佳？</p>
+<p>会出现金额一样的，但是手气最佳只有一个，先抢到的那个最佳。</p>
+</li>
+<li><p>每领一个红包就更新数据么？</p>
+<p>每抢到一个红包，就cas更新剩余金额和红包个数。</p>
+</li>
+<li><p>红包如何入库入账？</p>
+<p>数据库会累加已经领取的个数与金额，插入一条领取记录，入账则是后台异步操作。</p>
+</li>
+<li><p>入帐出错怎么办？比如红包个数没了，但余额还有？</p>
+<p>最后会有一个take all操作，另外还有一个对账来保障。</p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java%E5%B7%A5%E7%A8%8B%E5%B8%88%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="tag"># Java工程师面试题</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/8295/" rel="prev" title="Java工程师面试题-Netty">
+                  <i class="fa fa-angle-left"></i> Java工程师面试题-Netty
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/6051/" rel="next" title="Java工程师面试题-场景题-秒杀系统相关问题">
+                  Java工程师面试题-场景题-秒杀系统相关问题 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+  <a target="_blank" rel="noopener" href="https://zxalive.com" class="special-link">新站点zxalive.com</a>
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">zhangxin</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">1.8m</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">26:53</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

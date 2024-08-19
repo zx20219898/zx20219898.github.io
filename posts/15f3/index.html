@@ -1,0 +1,662 @@
+  <a target="_blank" rel="noopener" href="https://zxalive.com" class="special-link">新站点zxalive.com</a>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"zxblog.eu.org","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Java语言相关的所有知识点合集">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaSE">
+<meta property="og:url" content="https://zxblog.eu.org/posts/15f3/index.html">
+<meta property="og:site_name" content="知行博客">
+<meta property="og:description" content="Java语言相关的所有知识点合集">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zxblog.eu.org/assets/jsre6JMXnNFPxA4.jpg">
+<meta property="og:image" content="https://zxblog.eu.org/assets/IJkfUWFdMBwxaXP.png">
+<meta property="og:image" content="https://zxblog.eu.org/assets/LRjD1lwq5JNd4ng.jpg">
+<meta property="og:image" content="https://zxblog.eu.org/assets/PEdTkpC4BgOXFMo.png">
+<meta property="og:image" content="https://zxblog.eu.org/assets/EtzlwCHueA4VQsj.png">
+<meta property="og:image" content="https://zxblog.eu.org/assets/P4MKTotLfHehNyz.png">
+<meta property="og:image" content="https://zxblog.eu.org/assets/T7cMt6dj4RAiZ5W.png">
+<meta property="article:published_time" content="2021-11-17T07:28:57.000Z">
+<meta property="article:modified_time" content="2024-08-18T10:14:29.236Z">
+<meta property="article:author" content="zhangxin">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zxblog.eu.org/assets/jsre6JMXnNFPxA4.jpg">
+
+
+<link rel="canonical" href="https://zxblog.eu.org/posts/15f3/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://zxblog.eu.org/posts/15f3/","path":"posts/15f3/","title":"JavaSE"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>JavaSE | 知行博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">知行博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">新站点：zxalive.com</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IDEA%E3%80%81JDK%E3%80%81Maven%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">IDEA、JDK、Maven安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%80%8AEffectiveJava%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0"><span class="nav-number">2.</span> <span class="nav-text">《EffectiveJava》读书笔记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IO%E6%B5%81"><span class="nav-number">3.</span> <span class="nav-text">IO流</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java%E9%9B%86%E5%90%88"><span class="nav-number">4.</span> <span class="nav-text">Java集合</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9E%9A%E4%B8%BE"><span class="nav-number">5.</span> <span class="nav-text">枚举</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%92%E5%BD%92"><span class="nav-number">6.</span> <span class="nav-text">递归</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%A5%E5%BF%97%E7%BA%A7%E5%88%AB"><span class="nav-number">7.</span> <span class="nav-text">日志级别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">8.</span> <span class="nav-text">时间复杂度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">9.</span> <span class="nav-text">Java正则表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="nav-number">10.</span> <span class="nav-text">Java定时任务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">11.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B"><span class="nav-number">12.</span> <span class="nav-text">并发编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="nav-number">12.1.</span> <span class="nav-text">多线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F"><span class="nav-number">12.2.</span> <span class="nav-text">线程的创建方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5-%E5%90%8C%E6%AD%A5%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">12.3.</span> <span class="nav-text">线程同步_同步代码块</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E9%9B%86-x2F-%E7%BC%96%E7%A0%81%E9%9B%86"><span class="nav-number">13.</span> <span class="nav-text">字符集&#x2F;编码集</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%9B%E5%9E%8B"><span class="nav-number">14.</span> <span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java%E8%AF%AD%E8%A8%80-%E7%9B%B8%E5%85%B3%E4%B9%A6%E7%B1%8D"><span class="nav-number">15.</span> <span class="nav-text">Java语言-相关书籍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java%E8%AF%AD%E8%A8%80-%E8%B5%84%E6%BA%90"><span class="nav-number">16.</span> <span class="nav-text">Java语言-资源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%B4%E6%97%B6%E7%AC%94%E8%AE%B0"><span class="nav-number">17.</span> <span class="nav-text">临时笔记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#-1"><span class="nav-number">18.</span> <span class="nav-text"></span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zhangxin</p>
+  <div class="site-description" itemprop="description">新站点：zxalive.com</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">267</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+  <a target="_blank" rel="noopener" href="https://zxalive.com" class="special-link">新站点zxalive.com</a>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+  <a target="_blank" rel="noopener" href="https://zxalive.com" class="special-link">新站点zxalive.com</a>
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zxblog.eu.org/posts/15f3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhangxin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="知行博客">
+      <meta itemprop="description" content="新站点：zxalive.com">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="JavaSE | 知行博客">
+      <meta itemprop="description" content="Java语言相关的所有知识点合集">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JavaSE
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-11-17 15:28:57" itemprop="dateCreated datePublished" datetime="2021-11-17T15:28:57+08:00">2021-11-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-08-18 18:14:29" itemprop="dateModified" datetime="2024-08-18T18:14:29+08:00">2024-08-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">Java开发</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>15k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>14 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">Java语言相关的所有知识点合集</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="IDEA、JDK、Maven安装"><a href="#IDEA、JDK、Maven安装" class="headerlink" title="IDEA、JDK、Maven安装"></a><a href="/posts/247">IDEA、JDK、Maven安装</a></h1><h1 id="《EffectiveJava》读书笔记"><a href="#《EffectiveJava》读书笔记" class="headerlink" title="《EffectiveJava》读书笔记"></a><a href="/posts/1e72">《EffectiveJava》读书笔记</a></h1><h1 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a><a href="/posts/fb2b">IO流</a></h1><h1 id="Java集合"><a href="#Java集合" class="headerlink" title="Java集合"></a><a href="/posts/94">Java集合</a></h1><h1 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h1><ul>
+<li>枚举类是用final修饰的，枚举类不能被继承！</li>
+<li>枚举类默认继承了java.lang.Enum枚举类。</li>
+<li>枚举类的第一行都是常量,存储都是枚举类的对象。</li>
+<li>枚举类的第一行必须是罗列枚举类的实例名称。<br>所以：枚举类相当于是多例设计模式。</li>
+<li>java建议做信息标志和信息分类应该使用枚举实现：最优雅的方式。<br>可以实现可读性，而且入参受限制，不能乱输入！！！</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">修饰符 <span class="keyword">enum</span> 枚举名称&#123;</span><br><span class="line">    第一行都是罗列枚举实例的名称。</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 枚举</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Season</span> &#123;</span><br><span class="line">    SPRING , SUMMER , AUTUMN , WINTER;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 枚举类的编译以后源代码：</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">Season</span> <span class="keyword">extends</span> <span class="title class_">java</span>.lang.Enum&lt;Season&gt; &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Season</span> <span class="variable">SPRING</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Season</span>();</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Season</span> <span class="variable">SUMMER</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Season</span>();</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Season</span> <span class="variable">AUTUMN</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Season</span>();</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Season</span> <span class="variable">WINTER</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Season</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Season[] values();</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Season <span class="title function_">valueOf</span><span class="params">(java.lang.String)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>API</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 获取当前类的全部枚举实例 ： public static Season[] values()</span></span><br><span class="line">Season[] ss = Season.values();</span><br><span class="line"><span class="comment">// 获取枚举对象的索引: ordinal()</span></span><br><span class="line"><span class="type">Season</span> <span class="variable">s2</span> <span class="operator">=</span> Season.AUTUMN;</span><br><span class="line">System.out.println(s2.ordinal()); <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Season</span>&#123;</span><br><span class="line">    SPRING, SUMMER , AUTUMN, WINTER ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用案例</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Oritation</span>&#123;</span><br><span class="line">    UP , DOWN , LEFT , RIGHT ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">move</span><span class="params">(Oritation o)</span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (o)&#123;</span><br><span class="line">        <span class="keyword">case</span> UP:</span><br><span class="line">            System.out.println(<span class="string">&quot;让🐎往👆蹦~~~~&quot;</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> DOWN:</span><br><span class="line">            System.out.println(<span class="string">&quot;让🐎往👇蹦~~~~&quot;</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> LEFT:</span><br><span class="line">            System.out.println(<span class="string">&quot;让🐎往👈蹦~~~~&quot;</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> RIGHT:</span><br><span class="line">            System.out.println(<span class="string">&quot;让🐎往👉蹦~~~~&quot;</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><p>直接递归：自己的方法调用自己。</p>
+<p>间接递归：自己的方法调用别的方法，别的方法又调用自己。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">已知：f(x) = f(x - <span class="number">1</span>) + <span class="number">1</span>  （恒等式）</span><br><span class="line">已知：f(<span class="number">1</span>) = <span class="number">1</span></span><br><span class="line">求：  f(<span class="number">10</span>) = ?</span><br><span class="line"></span><br><span class="line">计算流程：</span><br><span class="line">f(<span class="number">10</span>) = f(<span class="number">9</span>) +  <span class="number">1</span></span><br><span class="line">f(<span class="number">9</span>)  = f(<span class="number">8</span>) +  <span class="number">1</span></span><br><span class="line">f(<span class="number">8</span>)  = f(<span class="number">7</span>) +  <span class="number">1</span></span><br><span class="line">f(<span class="number">7</span>)  = f(<span class="number">6</span>) +  <span class="number">1</span></span><br><span class="line">f(<span class="number">6</span>)  = f(<span class="number">5</span>) +  <span class="number">1</span></span><br><span class="line">f(<span class="number">5</span>)  = f(<span class="number">4</span>) +  <span class="number">1</span></span><br><span class="line">f(<span class="number">4</span>)  = f(<span class="number">3</span>) +  <span class="number">1</span></span><br><span class="line">f(<span class="number">3</span>)  = f(<span class="number">2</span>) +  <span class="number">1</span></span><br><span class="line">f(<span class="number">2</span>)  = f(<span class="number">1</span>) +  <span class="number">1</span></span><br><span class="line">f(<span class="number">1</span>)  = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">递归的三要素（理论）：</span><br><span class="line"><span class="number">1.</span>递归的终结点： f(<span class="number">1</span>)  = <span class="number">1</span></span><br><span class="line"><span class="number">2.</span>递归的公式：f(x) = f(x - <span class="number">1</span>) + <span class="number">1</span></span><br><span class="line"><span class="number">3.</span>递归的方向：必须走向终结点</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> x)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> f(x - <span class="number">1</span>) + <span class="number">1</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight gcode"><table><tr><td class="code"><pre><span class="line">拓展：递归的核心思想-公式转换</span><br><span class="line">已知： f<span class="comment">(x)</span> = f<span class="comment">(x + 1)</span> + <span class="number">2</span></span><br><span class="line"> f<span class="comment">(1)</span> = <span class="number">1</span></span><br><span class="line">求：   f<span class="comment">(10)</span> = ?</span><br><span class="line"></span><br><span class="line">公式转换：</span><br><span class="line">f<span class="comment">(n-1)</span> = f<span class="comment">(n-1+1)</span><span class="number">+2</span></span><br><span class="line">f<span class="comment">(n-1)</span> = f<span class="comment">(n)</span><span class="number">+2</span></span><br><span class="line">f<span class="comment">(n)</span> = f<span class="comment">(n-1)</span>- <span class="number">2</span> ;</span><br><span class="line"></span><br><span class="line">递归算法的三要素：</span><br><span class="line">（<span class="number">1</span>）递归的公式：   f<span class="comment">(n)</span> = f<span class="comment">(n-1)</span>- <span class="number">2</span> ;</span><br><span class="line">（<span class="number">2</span>）递归的终结点：  f<span class="comment">(1)</span> = <span class="number">1</span></span><br><span class="line">（<span class="number">3</span>）递归的方向：必须走向终结点。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> f(n-<span class="number">1</span>)- <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>递归的经典案例。</p>
+<ul>
+<li>猴子吃桃：</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">猴子第一天摘了若干个桃子，当即吃了一半，觉得好不过瘾，然后又多吃了一个。</span><br><span class="line">第二天又吃了前一天剩下的一半，觉得好不过瘾，然后又多吃了一个。</span><br><span class="line">以后每天都是如此</span><br><span class="line">等到第十天再吃的时候发现只有<span class="number">1</span>个桃子，请问猴子第一天总共摘了多少个桃子。</span><br><span class="line"></span><br><span class="line">公式：</span><br><span class="line"><span class="function"><span class="title">f</span><span class="params">(x+<span class="number">1</span>)</span></span> = <span class="built_in">f</span>(x) - <span class="built_in">f</span>(x) / <span class="number">2</span> - <span class="number">1</span></span><br><span class="line"><span class="number">2</span><span class="built_in">f</span>(x+<span class="number">1</span>) = <span class="number">2</span><span class="built_in">f</span>(x) - <span class="built_in">f</span>(x) - <span class="number">2</span></span><br><span class="line"><span class="number">2</span><span class="built_in">f</span>(x+<span class="number">1</span>) = <span class="built_in">f</span>(x) - <span class="number">2</span></span><br><span class="line"><span class="function"><span class="title">f</span><span class="params">(x)</span></span> = <span class="number">2</span><span class="built_in">f</span>(x+<span class="number">1</span>)+<span class="number">2</span></span><br><span class="line">递归的三要素：</span><br><span class="line">（<span class="number">1</span>）公式：<span class="built_in">f</span>(x) = <span class="number">2</span><span class="built_in">f</span>(x+<span class="number">1</span>)+<span class="number">2</span></span><br><span class="line">（<span class="number">2</span>）终结点：<span class="built_in">f</span>(<span class="number">10</span>) = <span class="number">1</span></span><br><span class="line">（<span class="number">3</span>）递归的方向：走向了终结点</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> x)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( x == <span class="number">10</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> ;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span>*f(x+<span class="number">1</span>)+<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>递归实现1-n的和</li>
+</ul>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="built_in">f</span>(<span class="keyword">n</span>) = 1 + 2 + 3 + 4 + 5 + 6 + ...<span class="keyword">n</span>-1 + <span class="keyword">n</span> ;</span><br><span class="line"><span class="built_in">f</span>(<span class="keyword">n</span>) = <span class="built_in">f</span>(<span class="keyword">n</span>-1) + <span class="keyword">n</span></span><br><span class="line"></span><br><span class="line">流程：</span><br><span class="line"><span class="built_in">f</span>(5) = <span class="keyword">return</span> <span class="built_in">f</span>(4)  + 5  = 1 + 2 + 3 + 4 + 5</span><br><span class="line"><span class="built_in">f</span>(4) = <span class="keyword">return</span> <span class="built_in">f</span>(3)  + 4  = 1 + 2 + 3 + 4</span><br><span class="line"><span class="built_in">f</span>(3) = <span class="keyword">return</span> <span class="built_in">f</span>(2)  + 3  = 1 + 2 + 3</span><br><span class="line"><span class="built_in">f</span>(2) = <span class="keyword">return</span> <span class="built_in">f</span>(1)  + 2  = 1 + 2</span><br><span class="line"><span class="built_in">f</span>(1) = <span class="keyword">return</span> 1</span><br><span class="line"></span><br><span class="line">递归的核心三要素：</span><br><span class="line">（1）递归的终点接： <span class="built_in">f</span>(1) = 1</span><br><span class="line">（2）递归的公式：  <span class="built_in">f</span>(<span class="keyword">n</span>) = <span class="built_in">f</span>(<span class="keyword">n</span>-1) + <span class="keyword">n</span></span><br><span class="line">（3）递归的方向必须走向终结点：</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">1</span> ) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> f(n-<span class="number">1</span>) + n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>n的阶乘</li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">n!= 1<span class="number">*2</span><span class="number">*3</span><span class="number">*4</span><span class="number">*5</span><span class="number">*6</span>*<span class="built_in">..</span>.*(n-1)*n。</span><br><span class="line">f(n) = 1<span class="number">*2</span><span class="number">*3</span><span class="number">*4</span><span class="number">*5</span><span class="number">*6</span>*<span class="built_in">..</span>.*(n-1)*n</span><br><span class="line">f(n) = f(n-1)*n</span><br><span class="line"></span><br><span class="line">流程：</span><br><span class="line">f(5) = f(4) * 5 ;  = 1<span class="number">*2</span><span class="number">*3</span><span class="number">*4</span><span class="number">*5</span></span><br><span class="line">f(4) = f(3) * 4 ;  = 1<span class="number">*2</span><span class="number">*3</span><span class="number">*4</span></span><br><span class="line">f(3) = f(2) * 3 ;  = 1<span class="number">*2</span><span class="number">*3</span></span><br><span class="line">f(2) = f(1) * 2 ;  = 1<span class="number">*2</span></span><br><span class="line">f(1) = 1</span><br><span class="line"></span><br><span class="line">递归的核心三要素：</span><br><span class="line">（1）递归的终点接： f(1) = 1</span><br><span class="line">（2）递归的公式   f(n) = f(n-1)*n</span><br><span class="line">（3）递归的方向必须走向终结点</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> ;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> f(n-<span class="number">1</span>)*n;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>递归实现文件搜索(非规律递归)</li>
+</ul>
+<figure class="highlight aspectj"><table><tr><td class="code"><pre><span class="line">需求：希望去D:/<span class="keyword">soft</span>目录寻找出eclipse.exe文件。</span><br><span class="line"></span><br><span class="line">分析：</span><br><span class="line">（1）定义一个方法用于做搜索。</span><br><span class="line">（2）进入方法中进行业务搜索分析。</span><br><span class="line">小结：</span><br><span class="line">非规律化递归应该按照业务流程开发！</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 去某个目录下搜索某个文件</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param</span> dir 搜索文件的目录。</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param</span> fileName 搜索文件的名称。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">searchFiles</span><span class="params">(File dir , String fileName)</span>&#123;</span><br><span class="line">    <span class="comment">// 1.判断是否存在该路径，是否是文件夹</span></span><br><span class="line">    <span class="keyword">if</span>(dir.exists() &amp;&amp; dir.isDirectory())&#123;</span><br><span class="line">        <span class="comment">// 2.提取当前目录下的全部一级文件对象</span></span><br><span class="line">        File[] files = dir.listFiles(); <span class="comment">// null/[]</span></span><br><span class="line">        <span class="comment">// 3.判断是否存在一级文件对象（判断是否不为空目录）</span></span><br><span class="line">        <span class="keyword">if</span>(files!=<span class="literal">null</span> &amp;&amp; files.length &gt; <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="comment">// 4.判断一级文件对象</span></span><br><span class="line">            <span class="keyword">for</span> (File f : files) &#123;</span><br><span class="line">                <span class="comment">// 5.判断file是文件还是文件夹</span></span><br><span class="line">                <span class="keyword">if</span>(f.isFile())&#123;</span><br><span class="line">                    <span class="comment">// 6.判断该文件是否为我要找的文件对象</span></span><br><span class="line">                    <span class="keyword">if</span>(f.getName().contains(fileName))&#123;</span><br><span class="line">                        System.out.println(f.getAbsolutePath());</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                            <span class="comment">// 启动它（拓展）</span></span><br><span class="line">                            <span class="type">Runtime</span> <span class="variable">r</span> <span class="operator">=</span> Runtime.getRuntime();</span><br><span class="line">                            r.exec(f.getAbsolutePath());</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                            e.printStackTrace();</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="comment">// 7.该文件是文件夹，文件夹要递归进入继续寻找</span></span><br><span class="line">                    searchFiles(f ,fileName);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="日志级别"><a href="#日志级别" class="headerlink" title="日志级别"></a>日志级别</h1><p><img src="/../../assets/jsre6JMXnNFPxA4.jpg"></p>
+<table>
+<thead>
+<tr>
+<th>日志级别</th>
+<th>描述</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OFF</td>
+<td>关闭：最高级别，不打印日志。</td>
+<td></td>
+</tr>
+<tr>
+<td>FATAL</td>
+<td>致命：指明非常严重的可能会导致应用终止执行错误事件。</td>
+<td>灾难信息，合并计入ERROR</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>错误：指明错误事件，但应用可能还能继续运行。</td>
+<td>记录错误堆栈信息</td>
+</tr>
+<tr>
+<td>WARN</td>
+<td>警告：指明可能潜在的危险状况。</td>
+<td>记录运维过程报警数据</td>
+</tr>
+<tr>
+<td>INFO</td>
+<td>信息：指明描述信息，从粗粒度上描述了应用运行过程。</td>
+<td>记录运维过程数据</td>
+</tr>
+<tr>
+<td>DEBUG</td>
+<td>调试：指明细致的事件信息，对调试应用最有用。</td>
+<td>程序员调试代码使用</td>
+</tr>
+<tr>
+<td>TRACE</td>
+<td>跟踪：指明程序运行轨迹，比DEBUG级别的粒度更细。</td>
+<td>运行堆栈信息，使用率低</td>
+</tr>
+<tr>
+<td>ALL</td>
+<td>所有：所有日志级别，包括定制级别</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>ALL &lt; TRACE &lt; DEBUG &lt; INFO &lt; WARN &lt; ERROR &lt; FATAL &lt; OFF</p>
+<p>设置日志组，控制指定包对应的日志输出级别，也可以直接控制指定包对应的日志输出级别</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开启debug模式，输出调试信息，常用于检查系统运行状况</span></span><br><span class="line"><span class="attr">debug:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置日志级别，root表示根节点，即整体应用日志级别</span></span><br><span class="line"><span class="attr">logging:</span> </span><br><span class="line">  <span class="attr">level:</span> </span><br><span class="line">    <span class="attr">root:</span> <span class="string">debug</span></span><br><span class="line">    </span><br><span class="line"><span class="comment"># 关闭运行日志图表（banner)    </span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">main:</span></span><br><span class="line">    <span class="attr">banner-mode:</span> <span class="string">off</span></span><br></pre></td></tr></table></figure>
+
+<p>日志文件</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">logging:</span></span><br><span class="line">  <span class="attr">file:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">server.log</span></span><br><span class="line">  <span class="attr">logback:</span></span><br><span class="line">    <span class="attr">rollingpolicy:</span></span><br><span class="line">      <span class="attr">max-file-size:</span> <span class="string">3KB</span></span><br><span class="line">      <span class="attr">file-name-pattern:</span> <span class="string">server.%d&#123;yyyy-MM-dd&#125;.%i.log</span></span><br></pre></td></tr></table></figure>
+
+<p>日志输出格式控制</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">logging:</span></span><br><span class="line">  <span class="attr">pattern:</span></span><br><span class="line">  <span class="attr">console:</span> <span class="string">&quot;%d %clr(%p) --- [%16t] %clr(%-40.40c)&#123;cyan&#125; : %m %n&quot;</span>  </span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../assets/IJkfUWFdMBwxaXP.png"></p>
+<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><p><img src="/../../assets/LRjD1lwq5JNd4ng.jpg"></p>
+<p>在上图中，我们可以看到当 n 很小时，函数之间不易区分，很难说谁处于主导地位，但是当 n 增大时，我们就能看到很明显的区别，谁是老大一目了然：</p>
+<p>O(1) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; O(n^2) &lt; O(n^3) &lt; O(2^n)</p>
+<blockquote>
+<p>出处：<a target="_blank" rel="noopener" href="https://blog.csdn.net/chenguanghan123/article/details/83478259">https://blog.csdn.net/chenguanghan123/article/details/83478259</a></p>
+</blockquote>
+<p><img src="/../../assets/PEdTkpC4BgOXFMo.png"></p>
+<p>如果ax&#x3D;N（a&gt;0，且a≠1），那么数x叫做以a为底N的对数，记作x&#x3D;logaN，读作以a为底N的对数，其中a叫做对数的底数，N叫做真数。</p>
+<p><img src="/../../assets/EtzlwCHueA4VQsj.png"></p>
+<blockquote>
+<p>出处：<a target="_blank" rel="noopener" href="https://blog.csdn.net/ted_cs/article/details/82881831">https://blog.csdn.net/ted_cs/article/details/82881831</a></p>
+</blockquote>
+<h1 id="Java正则表达式"><a href="#Java正则表达式" class="headerlink" title="Java正则表达式"></a>Java正则表达式</h1><p><a target="_blank" rel="noopener" href="https://www.runoob.com/regexp/regexp-syntax.html">https://www.runoob.com/regexp/regexp-syntax.html</a></p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line">字符类</span><br><span class="line"><span class="selector-attr">[abc]</span> <span class="selector-tag">a</span>、<span class="selector-tag">b</span> 或 <span class="selector-tag">c</span>（简单类）</span><br><span class="line"><span class="selector-attr">[^abc]</span> 任何字符，除了 <span class="selector-tag">a</span>、<span class="selector-tag">b</span> 或 <span class="selector-tag">c</span>（否定）</span><br><span class="line"><span class="selector-attr">[a-zA-Z]</span> <span class="selector-tag">a</span> 到 <span class="selector-tag">z</span> 或 <span class="selector-tag">A</span> 到 <span class="selector-tag">Z</span>，两头的字母包括在内（范围）</span><br><span class="line"><span class="selector-attr">[a-d[m-p]</span>] <span class="selector-tag">a</span> 到 <span class="selector-tag">d</span> 或 <span class="selector-tag">m</span> 到 <span class="selector-tag">p</span>：<span class="selector-attr">[a-dm-p]</span>（并集）</span><br><span class="line"><span class="selector-attr">[a-z&amp;&amp;[def23]</span>] <span class="selector-tag">d</span>、<span class="selector-tag">e</span> 或 <span class="selector-tag">f</span>（交集）</span><br><span class="line"><span class="selector-attr">[a-z&amp;&amp;[^bc]</span>] <span class="selector-tag">a</span> 到 <span class="selector-tag">z</span>，除了 <span class="selector-tag">b</span> 和 <span class="selector-tag">c</span>：<span class="selector-attr">[ad-z]</span>（减去）</span><br><span class="line"><span class="selector-attr">[a-z&amp;&amp;[^m-p]</span>] <span class="selector-tag">a</span> 到 <span class="selector-tag">z</span>，而非 <span class="selector-tag">m</span> 到 <span class="selector-tag">p</span>：<span class="selector-attr">[a-lq-z]</span>（减去）</span><br><span class="line"></span><br><span class="line">预定义字符类</span><br><span class="line">. 任何字符</span><br><span class="line">\<span class="selector-tag">d</span> 数字：<span class="selector-attr">[0-9]</span></span><br><span class="line">\<span class="selector-tag">D</span> 非数字： <span class="selector-attr">[^0-9]</span></span><br><span class="line">\<span class="selector-tag">s</span> 空白字符：<span class="selector-attr">[ \t\n\x0B\f\r]</span></span><br><span class="line">\<span class="selector-tag">S</span> 非空白字符：<span class="selector-attr">[^\s]</span></span><br><span class="line">\<span class="selector-tag">w</span> 单词字符：<span class="selector-attr">[a-zA-Z_0-9]</span></span><br><span class="line">\<span class="selector-tag">W</span> 非单词字符：<span class="selector-attr">[^\w]</span></span><br><span class="line"></span><br><span class="line">以上正则匹配只能校验单个字符。</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">Greedy</span> 数量词</span><br><span class="line"><span class="selector-tag">X</span>? <span class="selector-tag">X</span>，一次或一次也没有</span><br><span class="line"><span class="selector-tag">X</span>* <span class="selector-tag">X</span>，零次或多次</span><br><span class="line"><span class="selector-tag">X</span>+ <span class="selector-tag">X</span>，一次或多次</span><br><span class="line"><span class="selector-tag">X</span>&#123;<span class="selector-tag">n</span>&#125; <span class="selector-tag">X</span>，恰好 <span class="selector-tag">n</span> 次</span><br><span class="line"><span class="selector-tag">X</span>&#123;<span class="selector-tag">n</span>,&#125; <span class="selector-tag">X</span>，至少 <span class="selector-tag">n</span> 次</span><br><span class="line"><span class="selector-tag">X</span>&#123;<span class="selector-tag">n</span>,<span class="selector-tag">m</span>&#125; <span class="selector-tag">X</span>，至少 <span class="selector-tag">n</span> 次，但是不超过 <span class="selector-tag">m</span> 次</span><br><span class="line"><span class="selector-tag">public</span> <span class="selector-tag">String</span><span class="selector-attr">[]</span> <span class="selector-tag">split</span>(String regex);<span class="comment">// 按照正则表达式匹配的内容进行分割字符串，反回一个字符串数组。</span></span><br><span class="line"><span class="selector-tag">public</span> <span class="selector-tag">String</span> <span class="selector-tag">replaceAll</span>(String regex,String newStr);<span class="comment">// 按照正则表达式匹配的内容进行替换</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>正则表达式爬取信息中的内容</strong>。</p>
+<figure class="highlight wren"><table><tr><td class="code"><pre><span class="line"><span class="variable">public</span> <span class="keyword">class</span> <span class="title class_">RegexDemo05</span> &#123;</span><br><span class="line">    <span class="variable">public</span> <span class="keyword">static</span> <span class="variable">void</span> <span class="title function_">main</span>(<span class="params">String</span>[] <span class="params">args</span>) &#123;</span><br><span class="line">        <span class="title class_">String</span> <span class="variable">rs</span> <span class="operator">=</span> <span class="string">&quot;来黑马程序学习java,电话020-43422424，或者联系邮箱&quot;</span> <span class="operator">+</span></span><br><span class="line">                <span class="string">&quot;itcast@itcast.cn,电话18762832633，0203232323&quot;</span> <span class="operator">+</span></span><br><span class="line">                <span class="string">&quot;邮箱bozai@itcast.cn，400-100-3233 ，4001003232&quot;</span>;</span><br><span class="line">        <span class="comment">// 需求：从上面的内容中爬取出 电话号码和邮箱。</span></span><br><span class="line">        <span class="comment">// 1.定义爬取规则</span></span><br><span class="line">        <span class="title class_">String</span> <span class="variable">regex</span> <span class="operator">=</span> <span class="string">&quot;(<span class="char escape_">\\</span>w&#123;1,&#125;@<span class="char escape_">\\</span>w&#123;2,10&#125;(<span class="char escape_">\\</span>.<span class="char escape_">\\</span>w&#123;2,10&#125;)&#123;1,2&#125;)|(1[3-9]<span class="char escape_">\\</span>d&#123;9&#125;)|(0<span class="char escape_">\\</span>d&#123;2,5&#125;-?<span class="char escape_">\\</span>d&#123;5,15&#125;)|400-?<span class="char escape_">\\</span>d&#123;3,8&#125;-?<span class="char escape_">\\</span>d&#123;3,8&#125;&quot;</span>;</span><br><span class="line">        <span class="comment">// 2.编译正则表达式成为一个匹配规则对象</span></span><br><span class="line">        <span class="title class_">Pattern</span> <span class="variable">pattern</span> <span class="operator">=</span> <span class="title class_">Pattern</span>.<span class="property">compile</span>(<span class="variable">regex</span>);</span><br><span class="line">        <span class="comment">// 3.通过匹配规则对象得到一个匹配数据内容的匹配器对象</span></span><br><span class="line">        <span class="title class_">Matcher</span> <span class="variable">matcher</span> <span class="operator">=</span> <span class="variable">pattern</span>.<span class="property">matcher</span>(<span class="variable">rs</span>);</span><br><span class="line">        <span class="comment">// 4.通过匹配器去内容中爬取出信息</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="variable">matcher</span>.<span class="property">find</span>())&#123;</span><br><span class="line">            <span class="title class_">System</span>.<span class="property">out</span>.<span class="property">println</span>(<span class="variable">matcher</span>.<span class="property">group</span>());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Java定时任务"><a href="#Java定时任务" class="headerlink" title="Java定时任务"></a>Java定时任务</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// TimerTask  单线程</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">timerTask</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException &#123;</span><br><span class="line">    <span class="type">Timer</span> <span class="variable">timer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Timer</span>();</span><br><span class="line"></span><br><span class="line">    <span class="type">TimerTask</span> <span class="variable">timerTask</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TimerTask</span>() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;hi, 欢迎关注：java技术栈&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 第一次任务延迟时间</span></span><br><span class="line">    <span class="type">long</span> <span class="variable">delay</span> <span class="operator">=</span> <span class="number">2000</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 任务执行频率</span></span><br><span class="line">    <span class="type">long</span> <span class="variable">period</span> <span class="operator">=</span> <span class="number">3</span> * <span class="number">1000</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 开始调度</span></span><br><span class="line">    timer.schedule(timerTask, delay, period);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 指定首次运行时间</span></span><br><span class="line">    <span class="comment">// timer.schedule(timerTask, DateUtils.addSeconds(new Date(), 5), period);</span></span><br><span class="line"></span><br><span class="line">    Thread.sleep(<span class="number">20000</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 终止并移除任务</span></span><br><span class="line">    timer.cancel();</span><br><span class="line">    timer.purge();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="并发编程"><a href="#并发编程" class="headerlink" title="并发编程"></a>并发编程</h1><h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><figure class="highlight x86asm"><table><tr><td class="code"><pre><span class="line">程序是静止的，运行中的程序就是进程。</span><br><span class="line">进程的三个特征：</span><br><span class="line"><span class="number">1</span>.动态性 ： 进程是运行中的程序，要动态的占用内存，<span class="meta">CPU</span>和网络等资源。</span><br><span class="line"><span class="number">2</span>.独立性 ： 进程与进程之间是相互独立的，彼此有自己的独立内存区域。</span><br><span class="line"><span class="number">3</span>.并发性 ： 假如<span class="meta">CPU</span>是单核，同一个时刻其实内存中只有一个进程在被执行。</span><br><span class="line"><span class="meta">CPU</span>会分时轮询切换依次为每个进程服务，因为切换的速度非常</span><br><span class="line">快，给我们的感觉这些进程在同时执行，这就是并发性。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">什么是线程？</span><br><span class="line">     线程是属于进程的。一个进程可以包含多个线程，这就是多线程。</span><br><span class="line">     线程是进程中的一个独立执行单元。</span><br><span class="line">     线程创建开销相对于进程来说比较小。</span><br><span class="line">     线程也支持“并发性”。</span><br></pre></td></tr></table></figure>
+
+<h2 id="线程的创建方式"><a href="#线程的创建方式" class="headerlink" title="线程的创建方式"></a>线程的创建方式</h2><figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span>.继承Thread类的方式</span><br><span class="line">    -- <span class="number">1</span>.定义一个线程类继承Thread类。</span><br><span class="line">    -- <span class="number">2</span>.重写<span class="built_in">run</span>()方法</span><br><span class="line">    -- <span class="number">3</span>.创建一个新的线程对象。</span><br><span class="line">    -- <span class="number">4</span>.调用线程对象的<span class="built_in">start</span>()方法启动线程。</span><br><span class="line">    </span><br><span class="line">注意：</span><br><span class="line"><span class="number">1</span>.线程的启动必须调用<span class="built_in">start</span>()方法。否则当成普通类处理。</span><br><span class="line">-- 如果线程直接调用<span class="built_in">run</span>()方法，相当于变成了普通类的执行，此时将只有主线程在执行他们！</span><br><span class="line">-- <span class="built_in">start</span>()方法底层其实是给CPU注册当前线程，并且触发<span class="built_in">run</span>()方法执行</span><br><span class="line"><span class="number">2</span>.建议线程先创建子线程，主线程的任务放在之后。否则主线程永远是先执行完！</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Thread</span> <span class="variable">t</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MyThread</span>();</span><br><span class="line">t.start()</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span> ; i &lt; <span class="number">100</span> ; i++ )&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;子线程输出：&quot;</span>+i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Thread类的API</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span>:给当前线程取名字。</span><br><span class="line"><span class="number">2.</span><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">getName</span><span class="params">()</span>:获取当前线程的名字。</span><br><span class="line">-- 线程存在默认名称，子线程的默认名称是：Thread-索引。</span><br><span class="line">-- 主线程的默认名称就是：main</span><br><span class="line"><span class="number">3.</span><span class="keyword">public</span> <span class="keyword">static</span> Thread <span class="title function_">currentThread</span><span class="params">()</span> </span><br><span class="line">-- 获取当前线程对象，这个代码在哪个线程中，就得到哪个线程对象。</span><br><span class="line"><span class="number">4.</span><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">sleep</span><span class="params">(<span class="type">long</span> time)</span>: 让当前线程休眠多少毫秒再继续执行。</span><br><span class="line">-- <span class="keyword">public</span> <span class="title function_">Thread</span><span class="params">()</span></span><br><span class="line">-- <span class="keyword">public</span> <span class="title function_">Thread</span><span class="params">(String name)</span>:创建线程对象并取名字。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">b.实现Runnable接口的方式。</span><br><span class="line">    <span class="comment">-- 1.创建一个线程任务类实现Runnable接口。</span></span><br><span class="line">    <span class="comment">-- 2.重写run()方法</span></span><br><span class="line">    <span class="comment">-- 3.创建一个线程任务对象。</span></span><br><span class="line">    <span class="comment">-- 4.把线程任务对象包装成线程对象</span></span><br><span class="line">    <span class="comment">-- 5.调用线程对象的start()方法启动线程。</span></span><br><span class="line">    Thread的构造器：</span><br><span class="line">    <span class="comment">-- public Thread()&#123;&#125;</span></span><br><span class="line">    <span class="comment">-- public Thread(String name)&#123;&#125;</span></span><br><span class="line">    <span class="comment">-- public Thread(Runnable target)&#123;&#125;</span></span><br><span class="line">    <span class="comment">-- public Thread(Runnable target,String name)&#123;&#125;</span></span><br><span class="line"></span><br><span class="line">实现Runnable接口创建线程的优缺点：</span><br><span class="line">    缺点：代码复杂一点。</span><br><span class="line">    优点：</span><br><span class="line">    <span class="comment">-- 线程任务类只是实现了Runnable接口，可以继续继承其他类，而且可以继续实现其他接口（避免了单继承的局限性）</span></span><br><span class="line">    <span class="comment">-- 同一个线程任务对象可以被包装成多个线程对象</span></span><br><span class="line">    <span class="comment">-- 适合多个多个线程去共享同一个资源（后面内容）</span></span><br><span class="line">    <span class="comment">-- 实现解耦操作，线程任务代码可以被多个线程共享，线程任务代码和线程独立。</span></span><br><span class="line">    <span class="comment">-- 线程池可以放入实现Runable或Callable线程任务对象。(后面了解)</span></span><br><span class="line">    注意：其实Thread类本身也是实现了Runnable接口的。</span><br><span class="line">    <span class="comment">-- 不能直接得到线程执行的结果！</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Runnable</span> <span class="variable">target</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MyRunnable</span>();</span><br><span class="line"><span class="type">Thread</span> <span class="variable">t</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(target);</span><br><span class="line">t.start();</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyRunnable</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span> ; i &lt; <span class="number">10</span> ; i++ )&#123;</span><br><span class="line">            System.out.println(Thread.currentThread().getName()+<span class="string">&quot;==&gt;&quot;</span>+i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 匿名内部类写法</span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Thread</span>(<span class="keyword">new</span> <span class="title class_">Runnable</span>() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span> ; i &lt; <span class="number">10</span> ; i++ )&#123;</span><br><span class="line">            System.out.println(Thread.currentThread().getName()+<span class="string">&quot;==&gt;&quot;</span>+i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;).start();</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">c.线程的创建方式三: 实现Callable接口。</span><br><span class="line">    <span class="comment">-- 1,定义一个线程任务类实现Callable接口 ， 申明线程执行的结果类型。</span></span><br><span class="line">    <span class="comment">-- 2,重写线程任务类的call方法，这个方法可以直接返回执行的结果。</span></span><br><span class="line">    <span class="comment">-- 3,创建一个Callable的线程任务对象。</span></span><br><span class="line">    <span class="comment">-- 4,把Callable的线程任务对象包装成一个未来任务对象。</span></span><br><span class="line">    <span class="comment">-- 5.把未来任务对象包装成线程对象。</span></span><br><span class="line">    <span class="comment">-- 6.调用线程的start()方法启动线程</span></span><br><span class="line">    优点：全是优点。</span><br><span class="line">        <span class="comment">-- 线程任务类只是实现了Callable接口，可以继续继承其他类，而且可以继续实现其他接口（避免了单继承的局限性）</span></span><br><span class="line">        <span class="comment">-- 同一个线程任务对象可以被包装成多个线程对象</span></span><br><span class="line">        <span class="comment">-- 适合多个多个线程去共享同一个资源（后面内容）</span></span><br><span class="line">        <span class="comment">-- 实现解耦操作，线程任务代码可以被多个线程共享，线程任务代码和线程独立。</span></span><br><span class="line">        <span class="comment">-- 线程池可以放入实现Runable或Callable线程任务对象。(后面了解)</span></span><br><span class="line">        <span class="comment">-- 能直接得到线程执行的结果！</span></span><br><span class="line">    缺点：编码复杂。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Callable</span> <span class="variable">call</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MyCallable</span>();</span><br><span class="line"><span class="comment">// 4.把Callable任务对象包装成一个未来任务对象</span></span><br><span class="line"><span class="comment">//      -- public FutureTask(Callable&lt;V&gt; callable)</span></span><br><span class="line"><span class="comment">// 未来任务对象是啥，有啥用？</span></span><br><span class="line"><span class="comment">//      -- 未来任务对象其实就是一个Runnable对象:这样就可以被包装成线程对象！</span></span><br><span class="line"><span class="comment">//      -- 未来任务对象可以在线程执行完毕之后去得到线程执行的结果。</span></span><br><span class="line">FutureTask&lt;String&gt; task = <span class="keyword">new</span> <span class="title class_">FutureTask</span>&lt;&gt;(call);</span><br><span class="line"><span class="comment">// 5.把未来任务对象包装成线程对象</span></span><br><span class="line"><span class="type">Thread</span> <span class="variable">t</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(task);</span><br><span class="line"><span class="comment">// 6.启动线程对象</span></span><br><span class="line">t.start();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在最后去获取线程执行的结果,如果线程没有结果，让出CPU等线程执行完再来取结果</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">rs</span> <span class="operator">=</span> task.get(); <span class="comment">// 获取call方法返回的结果（正常/异常结果）</span></span><br><span class="line">    System.out.println(rs);</span><br><span class="line">&#125;  <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1.创建一个线程任务类实现Callable接口，申明线程返回的结果类型</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyCallable</span> <span class="keyword">implements</span> <span class="title class_">Callable</span>&lt;String&gt;&#123;</span><br><span class="line">    <span class="comment">// 2.重写线程任务类的call方法！</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="comment">// 需求：计算1-10的和返回</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span> ;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span> ; i &lt;= <span class="number">10</span> ; i++ )&#123;</span><br><span class="line">            System.out.println(Thread.currentThread().getName()+<span class="string">&quot; =&gt; &quot;</span> + i);</span><br><span class="line">            sum+=i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Thread.currentThread().getName()+<span class="string">&quot;执行的结果是：&quot;</span>+sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="线程同步-同步代码块"><a href="#线程同步-同步代码块" class="headerlink" title="线程同步_同步代码块"></a>线程同步_同步代码块</h2><p>线程同步的方式有三种：<br>（1）同步代码块。<br>（2）同步方法。<br>（3）lock显示锁。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">a.同步代码块。</span><br><span class="line"><span class="keyword">synchronized</span>(锁对象)&#123;</span><br><span class="line"><span class="comment">// 访问共享资源的核心代码</span></span><br><span class="line">&#125;</span><br><span class="line">锁对象：理论上可以是任意的“唯一”对象即可。</span><br><span class="line">原则上：锁对象建议使用共享资源。</span><br><span class="line">-- 在实例方法中建议用<span class="built_in">this</span>作为锁对象。此时<span class="built_in">this</span>正好是共享资源！必须代码高度面向对象</span><br><span class="line">-- 在静态方法中建议用类名.class字节码作为锁对象。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">b.同步方法</span><br><span class="line">方法加上一个修饰符 <span class="keyword">synchronized</span>.</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title function_">drawMoney</span><span class="params">(<span class="type">double</span> money)</span>：</span><br><span class="line">同步方法其实底层也是有锁对象的：</span><br><span class="line">如果方法是实例方法：同步方法默认用<span class="built_in">this</span>作为的锁对象。</span><br><span class="line">如果方法是静态方法：同步方法默认用类名.class作为的锁对象。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">c.lock显示锁。</span><br><span class="line">java.util.concurrent.locks.Lock机制提供了比<span class="keyword">synchronized</span>代码块和<span class="keyword">synchronized</span>方法更广泛的锁定操作,</span><br><span class="line">同步代码块/同步方法具有的功能Lock都有,除此之外更强大</span><br><span class="line"></span><br><span class="line">Lock锁也称同步锁，加锁与释放锁方法化了，如下：</span><br><span class="line">- `<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">lock</span><span class="params">()</span> `:加同步锁。</span><br><span class="line">- `<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">unlock</span><span class="params">()</span>`:释放同步锁。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">drawMoney</span><span class="params">(<span class="type">double</span> money)</span> &#123;</span><br><span class="line">    <span class="comment">// 1.先拿到是谁来取钱：取当前线程对象的名称</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> Thread.currentThread().getName();</span><br><span class="line">    lock.lock(); <span class="comment">// 上锁~!</span></span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        <span class="comment">// ..</span></span><br><span class="line">    &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">        lock.unlock(); <span class="comment">// 解锁~!</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="字符集-x2F-编码集"><a href="#字符集-x2F-编码集" class="headerlink" title="字符集&#x2F;编码集"></a>字符集&#x2F;编码集</h1><p>1B &#x3D; 8b 计算机中的最小单位是字节B.</p>
+<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line">一个字节<span class="number">8</span>位，<span class="number">2</span>^<span class="number">8</span> = <span class="number">256</span>位</span><br><span class="line"><span class="symbol">ASCII</span>编码：ASCII它是一种<span class="number">7</span>位编码，但它存放时必须占全一个字节，也即占用<span class="number">8</span>位。</span><br><span class="line">a  <span class="number">97</span></span><br><span class="line"><span class="keyword">b</span>  <span class="number">98</span></span><br><span class="line">A  <span class="number">65</span></span><br><span class="line"><span class="keyword">B</span>  <span class="number">66</span></span><br><span class="line"><span class="number">0</span>  <span class="number">48</span></span><br><span class="line"><span class="number">1</span>  <span class="number">49</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">GBK</span>编码：<span class="number">2</span>个字节</span><br><span class="line"><span class="symbol">Unicode</span>编码（万国码）：</span><br><span class="line"><span class="symbol">UTF</span>-<span class="number">8</span>：<span class="number">3</span>个字节</span><br><span class="line"></span><br><span class="line">英文和数字在任何编码集中都是一样的，都占<span class="number">1</span>个字节。</span><br><span class="line">英文和数字在任何编码集中可以通用，不会乱码！!</span><br><span class="line"><span class="symbol">GBK</span>编码中，<span class="number">1</span>个中文字符一般占<span class="number">2</span>个字节。</span><br><span class="line"><span class="symbol">UTF</span>-<span class="number">8</span>编码中，<span class="number">1</span>个中文字符一般占<span class="number">3</span>个字节。</span><br></pre></td></tr></table></figure>
+
+<h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><p><strong>泛型接口</strong></p>
+<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line">修饰符 <span class="class"><span class="keyword">interface</span> 接口名称&lt;泛型变量&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Data</span>&lt;E&gt; &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(E stu)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">delete</span><span class="params">(E stu)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">update</span><span class="params">(E stu)</span>;</span><br><span class="line"></span><br><span class="line">    E <span class="title function_">query</span><span class="params">(<span class="type">int</span> id)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 操作学生数据</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StudentData</span> <span class="keyword">implements</span> <span class="title class_">Data</span>&lt;Student&gt; &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(Student stu)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;添加学生！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">delete</span><span class="params">(Student stu)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;删除学生！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">update</span><span class="params">(Student stu)</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Student <span class="title function_">query</span><span class="params">(<span class="type">int</span> id)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>泛型通配符</strong></p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">通配符：？</span><br><span class="line"><span class="string">?可</span>以用在使用泛型的时候代表一切类型。</span><br><span class="line">E , T , K , V是在定义泛型的时候使用代表一切类型。</span><br><span class="line"></span><br><span class="line">泛型的上下限：</span><br><span class="line">? extends Car : 那么<span class="string">?必</span>须是Car或者其子类。(泛型的上限)</span><br><span class="line">? <span class="variable language_">super</span>  Car <span class="symbol">:</span>那么<span class="string">?必</span>须是Car或者其父类。（泛型的下限。不是很常见）</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GenericDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        ArrayList&lt;BMW&gt; bmws = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        bmws.add(<span class="keyword">new</span> <span class="title class_">BMW</span>());</span><br><span class="line">        bmws.add(<span class="keyword">new</span> <span class="title class_">BMW</span>());</span><br><span class="line">        bmws.add(<span class="keyword">new</span> <span class="title class_">BMW</span>());</span><br><span class="line">        run(bmws);</span><br><span class="line"></span><br><span class="line">        ArrayList&lt;BENZ&gt; benzs = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        benzs.add(<span class="keyword">new</span> <span class="title class_">BENZ</span>());</span><br><span class="line">        benzs.add(<span class="keyword">new</span> <span class="title class_">BENZ</span>());</span><br><span class="line">        benzs.add(<span class="keyword">new</span> <span class="title class_">BENZ</span>());</span><br><span class="line">        run(benzs);</span><br><span class="line"></span><br><span class="line">        ArrayList&lt;Dog&gt; dogs = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        dogs.add(<span class="keyword">new</span> <span class="title class_">Dog</span>());</span><br><span class="line">        dogs.add(<span class="keyword">new</span> <span class="title class_">Dog</span>());</span><br><span class="line">        dogs.add(<span class="keyword">new</span> <span class="title class_">Dog</span>());</span><br><span class="line">        <span class="comment">// run(dogs); // 就进不来了！</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 定义一个方法，可以让很多汽车一起进入参加比赛</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">(ArrayList&lt;? extends Car&gt; cars)</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Car</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BMW</span> <span class="keyword">extends</span> <span class="title class_">Car</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BENZ</span> <span class="keyword">extends</span> <span class="title class_">Car</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>自定义泛型方法</strong></p>
+<figure class="highlight bnf"><table><tr><td class="code"><pre><span class="line">修饰符 <span class="attribute">&lt;泛型变量&gt;</span> 返回值类型 方法名称(形参列表)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">class1</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; String <span class="title function_">arrToString</span><span class="params">(T[] nums)</span> &#123;</span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        sb.append(<span class="string">&quot;[&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (nums != <span class="literal">null</span> &amp;&amp; nums.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">                <span class="type">T</span> <span class="variable">ele</span> <span class="operator">=</span> nums[i];</span><br><span class="line">                sb.append(i == nums.length - <span class="number">1</span> ? ele : ele + <span class="string">&quot;, &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        sb.append(<span class="string">&quot;]&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>自定义泛型类</strong></p>
+<figure class="highlight crystal"><table><tr><td class="code"><pre><span class="line">修饰符 <span class="class"><span class="keyword">class</span> 类名&lt;泛型变量&gt;&#123;</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">泛型变量建议使用 E , T , K , V</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyArrayList</span>&lt;E&gt; &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">ArrayList</span> <span class="variable">lists</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayList</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(E e)</span> &#123;</span><br><span class="line">        lists.add(e);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">remove</span><span class="params">(E e)</span> &#123;</span><br><span class="line">        lists.remove(e);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> lists.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Java语言-相关书籍"><a href="#Java语言-相关书籍" class="headerlink" title="Java语言-相关书籍"></a>Java语言-相关书籍</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/i3Lib08a6v7i">Effective-Java-中文-第2版</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/idG6p08a6vhi">Effective-Java-中文-第3版</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iIGdW08a6w9g">Java 8实战</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iPcUL08a75kb">Java并发编程的艺术</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/CbnGASScGGH">Java核心技术-卷1-原书-第10版</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iS9Jq08a76na">Java核心技术-卷2-原书-第10版</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iNEZa08a74pa">Java编程思想-中文版-第4版</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/i09tn08a936h">JAVA编程思想-英文版-第4版</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iOCUU08a92rc">Spring实战-中文-第4版</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/i37F008a8wti">Java开发实战经典</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iEn6S08sdkaf">Head First Java 中文高清版.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/aRPMgTC3ugD">《Java并发编程之美》翟陆续.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iDI7V08sd9kj">21天学通Java.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/M7xgMWo11kB">疯狂JAVA讲义（第2版）–带书签版.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/5PMa1rFXBVK">经典JavaEE企业应用实战.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/uHQi2Sqqpdc">码出高效：Java开发手册.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iyy6f08sdb4f">深入浅出 Java 多线程.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/NeitTXd7ZMJ">实战Java高并发程序设计（第2版) .pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iRWPa08sjc9c">图解Java多线程设计模式.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iKvNV08sdgja">Effective Java中文版（第2版）.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/FCTntaFdWmB">EXPERT.ONE.ON.ONE.J2EE.DEVELOPMENT.WITHOUT.EJB-中文.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/i6cvV08seqzc">Hibernate实战（第2版）.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/imTSm08sf1dg">Java 程序员进阶之路（亮白版）.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/ixH9p08sf33i">Java8函数式编程.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iFL8Z08sf3kf">Java8中的炫酷特性和Java9中的新特性-杨晓峰.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iiiwE08sflle">Java编程思想(第4版).pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iq9T108sfone">Java并发编程的艺术.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/idjHD08sfybc">JAVA并发编程实践（中文）.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/NeitTXd7ZMJ">Java程序性能优化-让你的Java程序更快、更稳定.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/Jwd6qoNJywu">Java高手真经-编程基础卷：Java核心编程技术-mk.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/n9mkRWU1oWg">Java高手真经-高级编程卷：Java-Web高级开发技术-mk.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/u9jzhSK6c67">Java高手真经-网络开发卷：JAVA-WEB核心技术-mk.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/rZL3oMJrYUY">Java高手真经-系统架构卷：JAVA-WEB系统设计与架构-mk.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/aXDaUZjzfSm">Java高手真经-应用框架卷：Java-Web核心框架-mk.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/3suQKcNvC7M">Java核心技术 卷II 高级特性(原书第9版).pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/i16UU08sgfle">Java核心技术(卷I)基础知识(原书第9版)》.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/irXWg08sgldc">Java基础与案例开发详解.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/imLSD08sglsh">Java加密与解密的艺术 梁栋.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/idYHg08sgpsb">Java开发实战经典.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/WWULkdnG6HE">Java面向对象编程.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/eHBZCdPAa5K">Java深入解析- 透析Java本质的36个话题.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/inMsf08sgqih">java线程.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/XnQgCkbNXsF">Java项目开发案例全程实录_第二版_.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/ieHiM08sgtcj">Java性能权威指南.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/n3wwWW277s8">Java性能优化权威指南.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iaf7s08sgzpi">Java学习路线图：Java必须知道的300个问题.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iYvUv08sh1ch">JAVA优化编程.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iHNCt08sh7kb">Java语言程序设计-基础篇(原书第8版).pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iQrue08shcta">Java语言程序设计-进阶篇(原书第8版).pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/i58xe08shfhg">Java语言规范中文版(第三版).pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/il1KU08shfmb">JavaNIO（中文版）.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/i14uj089fo4b">JAVA核心知识点整理</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/ii4OI089fnhi">深入探讨HashMap的底层结构、原理、扩容机制</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iz4E5089fnta">ConcurrentHashMap的实现原理(JDK1.7和JDK1.8)</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iS7ZK089sczi">集合框架</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/ieX3s089scwf">泛型需要注意的问题</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iHWdu08aojzc">抽象类与接口.xmind</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iYaum08aok8b">Java常用集合.xmind</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/icWGT08aok9c">java基础总结：IO流.xmind</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/iaxMl08aokad">JSON与AJAX.xmind</a></li>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoub.com/i7xYN08aokfi">Servlet.xmind</a></li>
+</ul>
+<h1 id="Java语言-资源"><a href="#Java语言-资源" class="headerlink" title="Java语言-资源"></a>Java语言-资源</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/index.html">Java 8 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.matools.com/api/java8">Java 8 中文版</a></li>
+<li><a target="_blank" rel="noopener" href="http://doc.canglaoshi.org/">达内开发文档服务器</a></li>
+<li><a target="_blank" rel="noopener" href="https://r2coding.com/#/">Road 2 Coding</a>  <a target="_blank" rel="noopener" href="https://github.com/rd2coding/Road2Coding">Road2Coding-github仓库</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.nowcoder.com/">牛客网</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.javased.com/">JavaSED</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode-cn.com/">LeetCode</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.lintcode.com/">LintCode</a></li>
+<li><a target="_blank" rel="noopener" href="http://yun.itheima.com/map?hm=">黑马程序员</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bjsxt.com/biyeshejishipin.html">尚学堂</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv9965357/">2022黑马程序员Java学习路线图</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv5216534">2022年度上硅谷全网最全Java学习路线</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wyq1995/p/13764608.html">easyexcel解析excel</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/IQ-iiUhyeM1nuDhY6hRyvg">Java 8 一行代码解决了空指针问题，太厉害了…</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/javastack/p/9913270.html">Java 程序员必备的 15 个框架，前 3 个地位无可动摇！</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/luckystar_99/article/details/103596277">SpringBoot中.yml文件的使用</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/tk55/p/6058508.html">一个十年java程序员的心得</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/AntCoder/p/12886220.html">学习Spring，看这几本书就够了</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/lX3T5d7QePkPIBFKNkNaGA">满屏的if-else，看我怎么消灭你！</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/31614308">漫画：什么是ConcurrentHashMap？</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/sy_white/article/details/122112440">索引失效的情况及解决(超详细)</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/W9xT9hNQjjIfjGxbePqDJw">领域驱动编程，代码怎么写？</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qY4y1a7JD?p=6&spm_id_from=pageDriver&vd_source=c57311942d38847adc4597a126bba185">B站最透彻讲解Redis分布式锁【Redis setnx分布式锁、Redisson分布式锁】大厂秒杀系统如何实现</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangzhongshun/article/details/122482796">Java中 List、Set、Map遍历方式以及性能比较</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/liqiangchn/p/12432236.html">图解MySQL索引(上)—MySQL有中“8种”索引？</a></li>
+</ul>
+<hr>
+<h1 id="临时笔记"><a href="#临时笔记" class="headerlink" title="临时笔记"></a>临时笔记</h1><ul>
+<li>推荐：优先使用不可变的类 LocalDate</li>
+<li>不推荐使用：Switch语句 goto语句 char类型 int i, j</li>
+<li>Character类的 isJavaIdentifierStart isJavaIdentifierPart</li>
+<li>15&#x2F;2 &#x3D; 7 15%2 &#x3D; 1 15.0&#x2F;2 &#x3D; 7.5<br>整数被0除→异常<br>浮点数被0除→无穷大或NaN</li>
+<li>strictfp</li>
+<li>Math.sprt(x) 平方根<br>Math.pow(x,a) 幂运算<br>Math.PI π的近似值<br>Math.E e的近似值</li>
+<li>StrictMath类 得到一个完全可预测的结果，速度比Math差</li>
+<li>int[ ] arrs2&#x3D; Arrays.copyof(arrs1,arrs1.length)<br>int[ ] arrs &#x3D; Arrays.copyof(arrs,2*arrs.length)<br>int[ ] a &#x3D; new int[4]<br>int[ ] a &#x3D; {1,2,3,4}<br>new int[ ] {1,2,3,4}<br>new elementType[ ]{ }<br>Arrays.equals(arrs1,arrs2) 判断数组对象相等（字段全相等）</li>
+<li>依赖 uses-a<br>聚合 has-a<br>继承 is-a</li>
+<li>jdeprscan 工具类（检测代码中是否使用用已经废弃的API)</li>
+<li>Objects.requireNonNullElse(n,”unknow”)<br>Objects.requireNonNull(n,”The name cannot be null”)</li>
+<li>值传递、引用传递<br>Java：对象引用是按照值传递的</li>
+<li>SELECT DISTINCT vend_id FROM products</li>
+<li>DESC关键字只应用到直接位于其前面的列名<br>SELECT prod_id, prod_prrice, prod_name FROM products ORDER BY prod_price DESC, prod_name;</li>
+<li>SQL优先处理AND操作符</li>
+<li>IN操作符一般比OR操作符清单执行更快</li>
+<li>cat 1.txt 查看文件内容</li>
+</ul>
+<p>ResultFul</p>
+<p>restful资源设计<br>RESTFul设计指南<br>DDD以及软件架构设计<br>看看ES的RESTful接口<br>找个技术栈的restful学习</p>
+<p>JDK JRE JVM</p>
+<p>JDK：java Develpment Kit java 开发工具</p>
+<p>JRE：java Runtime Environment java运行时环境</p>
+<p>JVM：java Virtual Machine java 虚拟机</p>
+<p><img src="/../../assets/P4MKTotLfHehNyz.png"></p>
+<h1 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="/../../assets/T7cMt6dj4RAiZ5W.png"></h1>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/a013/" rel="prev" title="Java工程师面试题-数据结构与算法">
+                  <i class="fa fa-angle-left"></i> Java工程师面试题-数据结构与算法
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/aa4f/" rel="next" title="Java8">
+                  Java8 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+  <a target="_blank" rel="noopener" href="https://zxalive.com" class="special-link">新站点zxalive.com</a>
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">zhangxin</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">1.8m</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">26:53</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
